@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1554697503 source:c:\users\usuario\desktop\programacion utn\introduccion a c\biblioteca.c\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1554696563 source:c:\users\usuario\desktop\programacion utn\introduccion a c\biblioteca.c\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+
+1554694074 c:\users\usuario\desktop\programacion utn\introduccion a c\biblioteca.c\biblioteca.h
+

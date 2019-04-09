@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "biblioteca.h"
+#include "bibliotecaCesare.h"
+#include <string.h> ///no me la reconoce???
+
 
 
 /**
@@ -458,4 +460,75 @@ int pedirSumarMostrar()
     printf("El resultado es: %d", resultado);
     return 0;
 }
+
+   /** \brief pedir numero y validarlo entre 0 y 100
+     * con reintentos
+     * \param numero/en caso de ser valido setea por referncia
+     * \param numero maximo y minimo
+     *\param msg y msg error/
+     * \return resultado
+     */
+int utn_getNumber (int*pNumero,int maximo,int minimo, char* msg, char*msgError,int reintentos)
+{
+    int numero;
+    int res=-1;
+
+
+    while (reintentos>0)
+    {
+        printf("%s", msg);
+        if (scanf("%d",&numero)==1)
+        {
+            if (numero>=minimo && numero<=maximo)
+            {
+                res=0;
+                (*pNumero)=numero;
+                break;
+            }
+
+        }
+        fflush(stdin);
+        printf("%s", msgError);
+        reintentos --;
+
+    }
+
+    return res;
+}
+
+/** \brief pedir numero y validarlo entre 0 y 100
+     *
+     * \param numero/en caso de ser valido setea por referncia
+     * \param numero maximo y minimo
+     *\param msg y msg error/
+     * \return resultado
+     */
+
+/*int utn_getNumberValidandoCadena (int*pNumero,int maximo,int minimo, char* msg, char*msgError,int reintentos)
+
+{
+    int numero;
+    int res=-1;
+
+    while (reintentos>0)
+    {
+        printf("%s", msg);
+        if getInt(&numero)==1)
+        {
+            if (numero>=minimo && numero<=maximo)
+            {
+                res=0;
+                (*pNumero)=numero;
+                break;
+            }
+
+        }
+        fflush(stdin);
+        printf("%s", msgError);
+        reintentos --;
+
+    }
+
+    return res;
+} */
 
